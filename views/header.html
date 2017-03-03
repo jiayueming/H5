@@ -1,0 +1,93 @@
+
+<div ng-app="myApp">
+<div class="modal fade modal_regist">
+    <div class="modal-dialog">
+        <div class="modal-content modal_new">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="login">
+                    <form method="post" id="regist_form" ng-controller="validateCtrl" name="myFrom"  novalidate>
+                                <input type="email" name="Email" id="regist_email" placeholder="邮箱" ng-model="email" required>
+                        <span style="color: red" ng-show="myFrom.Email.$error.required">邮箱是必须的 </span>
+                        <span style="color: red" ng-show="myFrom.Email.$error.email">非法的邮箱 </span>
+                        <br>
+                        <!--<span id="mess1"></span><br/>-->
+                        <input type="text" name="Password" id="regist_pass" placeholder="密码">
+                        &nbsp;<br>&nbsp;
+                        <span id="mess2"></span>
+                        <br/><button type="submit" id="regist_zhuce" ng-disabled="myFrom.Email.$dirty && myFrom.Email.$invalid">注册</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <!--<a href="/index" id="suba">登录</a>-->
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>content
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<div class="modal fade modal_login">
+    <div class="modal-dialog">
+        <div class="modal-content modal_new">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body modal_new">
+                <div class="login">
+                    <form method="post" id="login_form" >
+                                <input type="text" name="Email" id="inp_email" placeholder="邮箱">&nbsp;&nbsp;<span id="mess3"></span>
+                                <br/>
+                                <input type="password" name="Password" id="inp_pass" placeholder="密码">&nbsp;&nbsp;<span id="mess4"></span><br>
+                                <br/><button type="submit" id="sub_zhuce">登录</button>
+                    </form>
+                </div>
+                <div class="modal-footer new_modal-footer">
+                    <!--<a href="/index" id="suba">登录</a>-->
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>content
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<nav class=" navbar-inverse navbar-default_new" role="navigation">
+    <div class="container-fluid ">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="#">
+                <img height="45px" style="margin-top: -10px" alt="Brand" src="/images/logo.png">
+            </a>
+            <a class="navbar-brand" href="/main" id="H5">H5
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="/course">课程</a></li>
+                <li><a href="/post">社区</a></li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search" id="ser_txt">
+                    <button type="button" class="btn btn-default" id="btn_searsh">搜索</button>
+                </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right" id="user_box">
+                <li><a href="#" id="zhuce">注册</a></li>
+                <li ><a href="#" id="denglu">登录</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+</div>
+<script src="/javascripts/Modal-Frame.js"> </script>
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>

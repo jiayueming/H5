@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发表</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <!--<link rel="stylesheet" href="bootstrap-3.3.5/css/bootstrap.css">-->
+
+    <!--<link rel="stylesheet" href="css/main1.css">-->
+    <script src="/javascripts/put_post.js"></script>
+    <script src="/javascripts/jquery-2.1.1.js"></script>
+
+    <link rel="stylesheet" href="/stylesheets/css.css">
+    <!--<script src="bootstrap-3.3.5/js/bootstrap.js"></script>-->
+</head>
+<body>
+<div class="container-fluid ">
+
+    <!--top-->
+    <nav class=" navbar-default navbar-default_new" role="navigation">
+        <div class="container-fluid ">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="#">
+                    <img height="45px" style="margin-top: -10px" alt="Brand" src="/images/logo.png">
+                </a>
+                <a class="navbar-brand" href="/main" id="H5">H5
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="/index">首页</a></li>
+                    <li><a href="/post">社区</a></li>
+                </ul>
+
+
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <!--put-->
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12" >
+                <!--<h3>帖子</h3>-->
+
+                <form class="form-horizontal" role="form" id="put_post">
+
+                    <!--标题-->
+                    <div class="form-group ">
+                        <p class="form-group_font">帖子</p>
+                        <input type="text" class="form-control input_height" id="input_nickname" placeholder="标题" name="title">
+                    </div>
+                    <!--内容-->
+                    <div class="form-group form-group_margin">
+                        <textarea class="form-control" rows="10" id="qianming" placeholder="说点什么吧" name="post_content"></textarea>
+                    </div>
+                    <div class="form-group form-group_margin">
+                        <div id="preview" class="form-group_img">
+                            <img id="imghead" width=100% height=100% border=0 src='/images/firstimg.jpg'>
+                        </div>
+                        <div class="form-group_upload">选择文件
+                            <input type="file" name="form_file" class="form_file" onchange="previewImage(this)" />
+                        </div>
+
+                    </div>
+                    <!--分类-->
+
+                    <div class="form-group form-group_margin">
+
+                        <label class="radio-inline">
+                            <input class="post_type_id" type="radio"  name="post_type" id="inlineRadio1" value="1">HTML/CSS
+                        </label>
+                        <label class="radio-inline">
+                            <input class="post_type_id" type="radio"   name="post_type" id="inlineRadio2" value="2">JavaScript
+                        </label>
+                        <label class="radio-inline">
+                            <input class="post_type_id" type="radio"   name="post_type" id="inlineRadio3" value="3">Jquery
+                        </label>
+                        <label class="radio-inline">
+                            <input class="post_type_id" type="radio"   name="post_type" id="inlineRadio5" value="4">MySql
+                        </label>
+                        <label class="radio-inline">
+                            <input class="post_type_id" type="radio"  class="a1234" name="post_type" id="inlineRadio6" value="5">Nodejs
+                        </label>
+                        <label class="radio-inline">
+                            <input class="post_type_id" type="radio" class="a1234" name="post_type" id="inlineRadio7" value="6">Framework
+                        </label>
+
+                    </div>
+
+
+                    <div class="form-group form-group_margin">
+
+                        <div class="col-sm-10">
+                            <button class="btn btn-default btn_style_1" id="report" >发表</button>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" >
+                <div class="notice_img"><img src="/images/注意.png" alt="">提问注意事项</div>
+                <div class="notice ">
+
+                   <ul>
+                        <li>大家每天可以免费提出两个问题，从第三个问题起，每个问题扣除2点积分，请知晓哦；</li>
+                        <li>您是来解决问题？请先搜索是否已经有同类问题吧。这样您就省心少打字。</li>
+                        <li>没找到是么？就在发问题时精确描述你的问题，不要写与问题无关的内容哟；</li>
+                        <li>慕课讨论更热衷于解达您想要的答案。能引起思考和讨论的知识性问题；</li>
+                    </ul>
+
+                </div>
+                <div class="notice_img_bottom">问答禁止这些提问</div>
+                <div class="notice_bottom">
+                    <ul>
+                        <li>禁止发布求职、交易、推广、广告类与问答无关信息将一律清理。</li>
+                        <li>尽可能详细描述您的问题，如标题与内容不符，或与问答无关的信息将被删除扣分。</li>
+                        <li>问答刷屏用户一律冻结帐号。</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--bottom-->
+    <%include footee.html%>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+
+    <script src="/javascripts/jquery-2.1.1.js"></script>
+
+    <script src="/javascripts/sHover.js"></script>
+    <!--<script src="/javascripts/Modal-Frame.js"></script>-->
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/stylesheets/lizi.css">
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <script src="/javascripts/lizi.js"></script>
+
+
+</head>
+<body>
+
+
+
+<!--登录模态框-->
+ <!--Button trigger modal -->
+
+<% include header.html%>
+
+<!--阶段-->
+<div class="jieduan">
+    <div class="jieduan1">
+        <div class="jieduan1_jieduan">阶段:</div>
+    </div>
+    <div class="jieduan2">
+        <div class="jieduan2_quanbu" ><span>全部</span></div>
+        <div class="jieduan2_quanbu hello/1" >阶段一</div>
+        <div class="jieduan2_quanbu hello/2">阶段二</div>
+        <div class="jieduan2_quanbu hello/3">阶段三</div>
+        <div class="jieduan2_quanbu hello/4">阶段四</div>
+        <div class="jieduan2_quanbu">阶段五</div>
+        <div class="jieduan2_quanbu">阶段六</div>
+        <div class="jieduan2_quanbu">阶段七</div>
+    </div>
+</div>
+<hr class="hr1">
+
+<!--课程-->
+<div class="jieduan">
+    <div class="jieduan1">
+        <div class="jieduan1_jieduan">课程:</div>
+    </div>
+    <div class="jieduan2">
+        <div class="jieduan2_quanbu"><span>全部</span></div>
+        <div class="jieduan2_quanbu">课程一</div>
+        <div class="jieduan2_quanbu">课程二</div>
+        <div class="jieduan2_quanbu">课程三</div>
+        <div class="jieduan2_quanbu">课程四</div>
+        <div class="jieduan2_quanbu">课程五</div>
+        <div class="jieduan2_quanbu">课程六</div>
+        <div class="jieduan2_quanbu">课程七</div>
+    </div>
+</div>
+<hr class="hr1">
+
+<!--章-->
+<div class="jieduan">
+    <div class="jieduan1">
+        <div class="jieduan1_jieduan">章:</div>
+    </div>
+    <div class="jieduan2">
+        <div class="jieduan2_quanbu"><span>全部</span></div>
+        <div class="jieduan2_quanbu">章一</div>
+        <div class="jieduan2_quanbu">章二</div>
+        <div class="jieduan2_quanbu">章三</div>
+        <div class="jieduan2_quanbu">章四</div>
+        <div class="jieduan2_quanbu">章五</div>
+        <div class="jieduan2_quanbu">章六</div>
+        <div class="jieduan2_quanbu">章七</div>
+    </div>
+</div>
+<hr class="hr1">
+
+<!--节-->
+<div class="jieduan">
+    <div class="jieduan1">
+        <div class="jieduan1_jieduan">节:</div>
+    </div>
+    <div class="jieduan2">
+        <div class="jieduan2_quanbu"><span>全部</span></div>
+        <div class="jieduan2_quanbu">节一</div>
+        <div class="jieduan2_quanbu">节二</div>
+        <div class="jieduan2_quanbu">节三</div>
+        <div class="jieduan2_quanbu">节四</div>
+        <div class="jieduan2_quanbu">节五</div>
+        <div class="jieduan2_quanbu">节六</div>
+        <div class="jieduan2_quanbu">节七</div>
+    </div>
+</div>
+<hr class="hr1">
+<!--最新，最热-->
+<div class="middle">
+    <div class="mid_zui"></div>
+    <div class="mid_zui"></div>
+    <!--<div class="mid_zui mid_zi">-->
+        <!--<span>最新</span>-->
+        <!--<span>最热</span>-->
+    <!--</div>-->
+    <div class="mid_kong"></div>
+    <div class="mid_kong"></div>
+    <!--<div class="mid_ye mid_zi">-->
+        <!--<span>上页</span>-->
+        <!--<span>下页</span>-->
+    <!--</div>-->
+    <div class="mid_ye"></div>
+
+</div>
+
+<!--中间展示部分-->
+
+<div class="show">
+    <div class="show_one ">
+        <%
+        for(var i=0;i<=course.length-1;i++){
+        %>
+
+        <div class="show_one_show example1 course">
+
+            <a href="/video?Video_id=<%=course[i].Video_id%>"><span class="intro1"></span><img src="/images/<%=course[i].img_url%>" alt=""></a>
+            <div class="show_one_show_title course_inner_title"><%=course[i].Course_name%></div>
+        </div>
+
+        <%
+        }
+        %>
+    </div>
+</div>
+<!--分页-->
+<div class="container-fluid footee">
+    <div class="row dibufenye">
+        <nav>
+            <ul class="pagination">
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<%include footee.html%>
+
+</body>
+</html>

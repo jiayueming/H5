@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>video</title>
+</head>
+
+<script src="/javascripts/jquery-2.1.1.js"></script>
+
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/stylesheets/revideo.css">
+<link rel="stylesheet" href="/stylesheets/header.css">
+<script src="/javascripts/video.js"></script>
+
+<body>
+<% include header.html%>
+<div class="none"></div>
+<div class="top">
+     <div class="top_left">
+         <video src="/video/<%=video[0].Video_url%>" controls="controls"></video>
+     </div>
+     <div class="top_right">
+         <h3>课程详情</h3>
+        <div class="course_detail"><%=video[0].Video_intro%></div>
+     </div>
+</div>
+<div class="middle">
+    <div class="middle_left">
+            <div class="middle_left_nav">
+                <ul>
+                    <li id="page1">课程详情</li>
+                    <li id="page2">评论</li>
+                    <li id="page3">题库</li>
+                </ul>
+            </div>
+        <div class="content">
+            <div class="page1">
+                <div class="course_intro">
+                    <div class="page1_title">课程描述</div>
+                    <div class="page1_content">
+                        HTML5是用于取代1999年所制定的 HTML 4.01 和 XHTML 1.0 标准的 HTML 标准版本，
+                        现在仍处于发展阶段，但大部分浏览器已经支持某些 HTML5 技术。HTML 5有两大特点：
+                        首先，强化了 Web 网页的表现性能。其次，追加了本地数据库等 Web 应用的功能。广义论及HTML5时，
+                        实际指的是包括HTML、CSS和JavaScript在内的一套技术组合。它希望能够减少浏览器对于需要插件的丰富性
+                        网络应用服务（plug-in-based rich internet application，RIA)，如Adobe Flash、Microsoft
+                        Silverlight，与Oracle JavaFX的需求，并且提供更多能有效增强网络应用的标准集
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="middle_right">
+        <div class="tea_info">
+            <h4>讲师简介</h4>
+            <hr>
+            <p>本堂课可以有两种学习方式,一种是针对于没有编程基础的同学,
+                可以在这堂课上看到HTML5的趋势,以及我
+            </p>
+        </div>
+        <div class="post">
+            <h4>最新帖子</h4>
+            <hr>
+            <p>本堂课可以有两种学习方式,一种是针对于没有编程基础的同学,
+                可以在这堂课上看到HTML5的趋势,以及我们可以用HTML5做什么,找到学习HTML5的原因，
+                二是针对于已经有了一定前端基础的同学,可以了解HTML5当中新的特性,以及我们是如何
+            </p>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <table id="footer">
+        <tr>
+            <th>关于我们</th>
+            <th>产品服务</th>
+            <th>优质资源</th>
+            <th>帮助中心</th>
+        </tr>
+        <tr>
+            <td>梦工厂简介</td>
+            <td>新课发布</td>
+            <td>金牌讲师</td>
+            <td>新手上路</td>
+        </tr>
+        <tr>
+            <td>网站地图</td>
+            <td>专题推荐</td>
+            <td>精品课程</td>
+            <td>学习问题</td>
+        </tr>
+        <tr>
+            <td>服务条款</td>
+            <td>功能更新</td>
+            <td>公开课</td>
+            <td>积分规则</td>
+        </tr>
+        <tr>
+            <td>版权申明</td>
+            <td>有奖活动</td>
+            <td>手机端下载</td>
+            <td>意见反馈</td>
+        </tr>
+    </table>
+</div>
+<div class="footer_bottom">
+    <div id="bottom_left">
+        ©2016 课工场互联网教育 版权所有 京ICP备15057271号 京公网安备11010802017390号</div>
+    <div id="bottom_right">
+        <a href="#"><img src="../images/email.png">&nbsp;&nbsp;客服邮箱&nbsp;&nbsp;jiayuemingde@sina.cn</a>
+    </div>
+</div>
+</body>
+</html>

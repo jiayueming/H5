@@ -1,0 +1,44 @@
+#login_form ,#regist_form{
+    margin-left: 130px;
+}
+#login_form input,#regist_form input{
+    width:300px;
+    height:40px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+.login{
+    height: 200px;
+}
+#sub_zhuce,#regist_zhuce{
+    width:300px;
+    height:40px;
+    background-color: #00B7FF;
+    border: none;
+    border-radius: 5px;
+}
+#login_form input:hover{
+    box-shadow:0 0 10px #0CC;
+}
+#regist_form input:hover{
+    box-shadow:0 0 10px #0CC;
+}
+.new_modal-footer{
+    height: 50px;
+}
+.modal_new{
+    height: 330px;
+}
+.headYuan{
+    width:40px;
+    height:40px;
+
+    margin-top: -5px;
+    border-radius: 40px;
+}
+.state1{
+    color:red;
+}
+.state2{
+    color:green;
+}

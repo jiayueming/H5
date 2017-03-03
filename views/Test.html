@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="/stylesheets/footee.css">
+    <link rel="stylesheet" href="/stylesheets/Modal-Frame.css">
+    <link rel="stylesheet" href="/stylesheets/test.css">
+    <script src="/javascripts/jquery-2.1.1.js"></script>
+    <script src="/javascripts/test.js"></script>
+</head>
+<body>
+<%include header.html%>
+    <div class="top">
+        <div class="top_content">
+            <div class="row1">
+                <div class="title">阶段:</div>
+                    <ul>
+                        <li>第一阶段</li>
+                        <li>第二阶段</li>
+                        <li>第三阶段</li>
+                        <li>第四阶段</li>
+                    </ul>
+            </div><hr class="hr">
+            <div class="row1">
+                <div class="title">课程:</div>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>CSS3</li>
+                </ul>
+            </div><hr class="hr">
+            <div class="row1">
+                <div class="title">章节:</div>
+                <ul>
+                    <li>第一章</li>
+                    <li>第二章</li>
+                    <li>第三章</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="title1">试题:</div>
+        <%
+        for( var i=0;i<=tests.length-1;i++){
+        %>
+        <div class="test">
+            <div class="question">
+                <%=tests[i].Test_name%>
+            </div>
+            <div class="choice">
+                <label><input type="radio" name="choice"><%=tests[i].ChoiceA%></label>
+                <label><input type="radio" name="choice"><%=tests[i].ChoiceB%></label>
+                <label><input type="radio" name="choice"><%=tests[i].ChoiceC%></label>
+                <label><input type="radio" name="choice"><%=tests[i].ChoiceD%></label>
+            </div>
+        </div>
+        <%
+        }
+
+        %>
+        <footer>
+            <%
+            for(var i=1;i<=pageAccount;i++){
+            %>
+            <a href="/Test/?index=<%=i%>"><%=i%></a>
+            <%
+            }
+            %>
+        </footer>
+    </div>
+    <%include footee.html%>
+</body>
+</html>

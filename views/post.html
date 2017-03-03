@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>post</title>
+
+    <script src="/javascripts/jquery-2.1.1.js"></script>
+    <script src="/javascripts/post.js"></script>
+    <script src="/javascripts/jquery.mousewheel.js"></script>
+    <!--<script src="/javascripts/Modal-Frame.js"></script>-->
+    <!--<script src="/javascripts/search_ajax.js"></script>-->
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <link rel="stylesheet" href="/stylesheets/post.css">
+    <link rel="stylesheet" href="/stylesheets/footee.css">
+
+</head>
+<body>
+<% include header.html%>
+<div class="main">
+    <!--left-->
+    <div class="main_left">
+        <div class="main_left_img">
+           <div class="main_left_img_tex"></div>
+            <div class="main_left_img_btn">
+                <a href="/users/put_post"><button>我要发帖</button></a>
+            </div>
+        </div>
+        <div class="main_left_zui">
+            <span class="hot">最热</span>
+            <span>最新</span>
+        </div>
+        <div class="main_left_show_top">
+            <!--<span class="main_left_show_top_span">按时间顺序</span>-->
+            <!--<div class="abc">-->
+            <!--<div class="main_left_show_top_triangle1"></div>-->
+            <!--</div>-->
+            <!--<div class="main_left_show_top_hid">-->
+                <!--<div class="main_left_show_top_hid_time">时间</div>-->
+                <!--<div class="main_left_show_top_hid_call">回答数</div>-->
+            <!--</div>-->
+        </div>
+        <div class="content_post">
+        <%
+        if(posts.length==0){
+        %>
+        <div>对不起</div>
+        <%
+        }else{
+        for( var i=0;i<=posts.length-1;i++){
+        %>
+        <div class="main_left_show_middle">
+            <div class="main_left_show_middle_top">
+                <span><%=posts[i].time%></span>
+            </div>
+            <div class="main_left_show_middle_title hello/<%=posts[i].Post_id%>" ><h2><a href="/users/postDetail?Post_id=<%=posts[i].Post_id%>"><%=posts[i].Title%></a></h2></div>
+            <div class="main_left_show_middle_content"><%=posts[i].Post_content%></div>
+            <div class="main_left_show_middle_bottom">
+                <span class="main_left_show_middle_bottom_span">浏览4</span>|
+                <span class="main_left_show_middle_bottom_span_2">评论</span>|
+                <span class="main_left_show_middle_bottom_span_3 hello/<%=posts[i].Post_id%>" id="fav2"><img src="/images/fav2.png" alt=""></span>
+                <span class="main_left_show_middle_bottom_span_4 " id="fav1"><img src="/images/fav1.png" alt=""></span>
+                |<span>赞1</span>
+            </div>
+        </div>
+        <%
+        }
+        }
+        %>
+        </div>
+        <div class="fot_fot">
+            <button class="fot_btn">点击加载更多</button>
+        </div>
+
+            <div class="fot_da">
+            <%
+            for(var i=1;i<=pageAccount;i++){
+            %>
+                <div class="fot_zhong">
+            <a href="/post/?index=<%=i%>"><%=i%></a>
+                </div>
+            <%
+            }
+            %>
+            </div>
+
+
+            <!--<div class="fot_a"><a id="fot_a" href="/post/?index=<%=i%>"><%=i%></a></div>-->
+
+
+
+    </div>
+
+    <!--middle-->
+    <div class="main_middle">&nbsp;</div>
+
+    <!--right-->
+    <div class="main_right">
+        <div class="main_right_head">
+            <div class="main_right_head_img">
+            <img src="images/touxiang.png" alt="">
+            <span>变态先生</span>
+        </div>
+            <div class="main_right_head_font">
+                <span>帖子</span>
+                <span>提问</span>
+                <span>消息</span>
+            </div>
+        </div>
+        <div class="main_right_show">
+            <div class="main_right_show_head">推荐帖子</div>
+            <div class="main_right_show_content">
+                <ul>
+                    <li>专家问答十六期赠书名单</li>
+                    <li>H5开发工具</li>
+                    <li>CSDN 移动客户端 </li>
+                    <li>问答频道每周精彩问答）</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

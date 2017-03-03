@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <link rel="bookmark" href="/favicon.ico"/>
+    <meta charset="UTF-8">
+    <title>course</title>
+    <script src="/javascripts/jquery-2.1.1.js"></script>
+
+    <script src="/javascripts/sHover.js"></script>
+    <!--<script src="/javascripts/Modal-Frame.js"></script>-->
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <link rel="stylesheet" href="/stylesheets/course.css">
+    <script src="/javascripts/course.js"></script>
+    <script src="/javascripts/sHover.js"></script>
+
+</head>
+<body>
+<% include header.html%>
+<div class="container-fulid body_con">
+<div class="container con_new">
+    <br>
+    <br>
+    <br>
+    <!--//阶段-->
+    <div class="row new_row">
+            <div class="col-md-2 col-lg-2 col-sm-2 col-xs-12 stage">方向:</div>
+            <div class="col-md-10 col-lg-10 col-sm-10 col-xs-12">
+                <div class="row">
+                    <div class="quanbu col-lg-2 col-md-2 col-sm-3 col-xs-2 hello/1">全部</div>
+                    <div class="jieduan col-lg-2 col-md-2 col-sm-3 col-xs-2 hello/1">阶段一</div>
+                    <div class="jieduan col-lg-2 col-md-2 col-sm-3 col-xs-2 hello/2">阶段二</div>
+                    <div class="jieduan col-lg-2 col-md-2 col-sm-3 col-xs-2 hello/3">阶段三</div>
+                    <div class="jieduan col-lg-2 col-md-2 col-sm-3 col-xs-2 hello/4">阶段四</div>
+                </div>
+                </div>
+
+
+            </div>
+    <div class="row ">
+        <div class="col-md-12">
+            <hr>
+        </div>
+    </div>
+    <div class="row new_row">
+        <div class="col-md-2 col-lg-2 col-sm-2 col-xs-12 stage">分类:</div>
+        <div class="col-md-10 col-lg-10 col-sm-10 col-xs-12">
+            <div class="row">
+                <div class="quanbu1 col-lg-2 col-md-2 col-sm-2 col-xs-2 hello/1">全部</div>
+                <div class="kecheng col-lg-2 col-md-2 col-sm-2 col-xs-2 hello/1">CSS3</div>
+                <div class="kecheng col-lg-2 col-md-2 col-sm-2 col-xs-2 hello/2">JavaScript</div>
+                <div class="kecheng col-lg-2 col-md-2 col-sm-2 col-xs-2 hello/3">React</div>
+                <div class="kecheng col-lg-2 col-md-2 col-sm-2 col-xs-2 hello/4">jQuery</div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="row ">
+        <div class="col-md-12">
+            <hr>
+        </div>
+    </div>
+    <div class="row new_row">
+        <div class="col-md-2 col-lg-2 col-sm-2 col-xs-12 stage">分类:</div>
+        <div class="col-md-10 col-lg-10 col-sm-10 col-xs-12">
+            <div class="row">
+                <div class="quanbu2 col-lg-2 col-md-2 col-sm-2 col-xs-2 hello/1">全部</div>
+                <div class="kecheng col-lg-2 col-md-2 col-sm-2 col-xs-2 hello/1">nodejs</div>
+                <div class="kecheng col-lg-2 col-md-2 col-sm-2 col-xs-2 hello/2">bootstrap</div>
+                <div class="kecheng col-lg-2 col-md-2 col-sm-2 col-xs-2 hello/3">angularjs</div>
+                <div class="kecheng col-lg-2 col-md-2 col-sm-2 col-xs-2 hello/4">shencha</div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+<br>
+<br>
+<br>
+<div class="container-fuild juzhong">
+    <div class="row">
+        <div class="col-lg-1 "></div>
+        <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 ">
+            <div class="container-fuild">
+                <div class="row show_cou_new" >
+            <%
+            for(var i=0;i<=course.length-1;i++){
+            %>
+
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 show_cou">
+                <div class="show_cou_q example1">
+                    <a href="/video?Video_id=<%=course[i].Video_id%>"><span class="intro1"></span><img src="/images/<%=course[i].img_url%>" alt=""></a>
+                    <div class="show_cou_q_title"><%=course[i].Course_name%></div>
+                </div>
+            </div>
+
+
+            <%
+            }
+            %>
+             </div>
+            </div>
+        </div>
+        <div class="col-lg-1"></div>
+    </div>
+</div>
+
+
+
+
+<!--课程-->
+<div class="footer">
+   <ul >
+         <%
+         for(var i=1;i<=pageAccount;i++){
+          %>
+         <li><a href="/course/?course=<%=i%>"><%=i%></a></li>
+         <%
+         }
+         %>
+   </ul>
+</div>
+
+</body>
+</html>
